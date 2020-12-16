@@ -1,0 +1,27 @@
+package assistedpractice3_5;
+
+//Writing a program in Java to demonstrate the throws keyword
+public class ThrowsDemo {
+	void Division() throws ArithmeticException  //throws keyword used to decorate the method where there is
+	//high chances to get exception . later, that method is called in try and catch block.
+    {
+        int a=45,b=0,rs;
+        rs = a / b;
+        System.out.print("\n\t The result is: " + rs);
+    }
+	
+     public static void main(String[] args)
+    {
+        ThrowsDemo T = new ThrowsDemo(); //Instance of the class 
+         try
+        {
+            T.Division();
+        }
+        catch(ArithmeticException Ex)
+        {
+            System.out.print("\n\tError : " + Ex.getMessage());
+        }
+        System.out.print("\n\tEnd of program.");
+    }
+
+}
